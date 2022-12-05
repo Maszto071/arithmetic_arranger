@@ -1,5 +1,7 @@
 import re
 
+import regex
+
 
 def arithmetic_arranger(problems):
   arranged_problems= problems
@@ -40,7 +42,44 @@ def do_math(element):
     empty_l.append(a - b)
   return empty_l
 
+def sign_check(s:str):
+   return regex.findall("\\+|-",s)
 
-res = split_list(random_l)
-for ele in res:
-  do_math(ele)
+
+def test_sign(s:str):
+  if "".join(s) == '-':
+    print('subtraction')
+  elif "".join(s) == '+':
+    print('sum')
+
+# res = split_list(random_l)
+# for ele in res:
+#   do_math(ele)
+#
+
+
+# foo = regex.split(r"( \+ \d*| \- \d*)",random_l[0])
+# for ele in foo:
+#   print("{0:{align}16}".format(ele, align='>'))
+
+# =================== 11.11.2022 happy independence day Poland!
+empty_ls = []
+for ele in random_l:
+  empty_ls.append(regex.split(r" ", ele))
+
+# for i in range(3):
+#   for key, value in enumerate(empty_ls):
+#       print("{0:{align}4}".format(empty_ls[key][i],fill='x',align='>'), end= " ")
+#   print("\n")
+
+TODO: "print in one line"
+for i in range(3):
+    for key, value in enumerate(empty_ls):
+        print("{0:{align}8}".format(empty_ls[key][i],align='>'), end= " ")
+    print("\n".lstrip())
+
+foo = sign_check(random_l[0])
+bar = sign_check(random_l[1])
+print("====")
+test_sign(foo)
+test_sign(bar)
