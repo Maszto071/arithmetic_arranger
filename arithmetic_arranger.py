@@ -34,13 +34,7 @@ random_l = ["32 + 698", "3801 - 2", "45 + 43", "123 + 49"]
 empty_l =[]
 
 
-def do_math(element):
-  a, b = int(element[0]), int(element[2])
-  if element[1] == '+':
-    empty_l.append(a + b)
-  elif element[1] == '-':
-    empty_l.append(a - b)
-  return empty_l
+
 
 def sign_check(s:str):
    return regex.findall("\\+|-",s)
@@ -72,14 +66,32 @@ for ele in random_l:
 #       print("{0:{align}4}".format(empty_ls[key][i],fill='x',align='>'), end= " ")
 #   print("\n")
 
-TODO: "print in one line"
+def do_math(element):
+  a, b = int(element[0]), int(element[2])
+  if element[1] == '+':
+    empty_l.append(a + b)
+  elif element[1] == '-':
+    empty_l.append(a - b)
+  return empty_l
+
+
+[do_math(x) for x in empty_ls]
+
 for i in range(3):
-    for key, value in enumerate(empty_ls):
-        print("{0:{align}8}".format(empty_ls[key][i],align='>'), end= " ")
-    print("\n".lstrip())
+    empty_ls[i].append("    ----")
+    empty_ls[i].append(empty_l[i])
+
+TODO: "print in one line"
+for i in range(5):
+  print(i)
+  for key, value in enumerate(empty_ls):
+      print("{0:{align}8}".format(empty_ls[key][i],align='>'), end= " ")
+  print("\n".lstrip())
+
+
 
 foo = sign_check(random_l[0])
 bar = sign_check(random_l[1])
-print("====")
-test_sign(foo)
-test_sign(bar)
+
+# test_sign(foo)
+# test_sign(bar)

@@ -1,4 +1,5 @@
-Students in primary school often arrange arithmetic problems vertically to make them easier to solve. For example, "235 
+Students in primary school often arrange arithmetic problems vertically to make them easier to solve. 
+For example, "235 
 + 52" becomes:
 
   235
@@ -30,10 +31,12 @@ The function will return the correct conversion if the supplied problems are pro
   a string that describes an error that is meaningful to the user.
 
 Situations that will return an error:
-If there are too many problems supplied to the function. The limit is five, anything more will return: Error: Too many p
-roblems.
+If there are too many problems supplied to the function. The limit is five, anything more will return: Error: Too many 
+problems.
 The appropriate operators the function will accept are addition and subtraction. Multiplication and division will return
-an error. Other operators not mentioned in this bullet point will not need to be tested. The error returned will be: Error: Operator must be '+' or '-'.
+an error.
+Other operators not mentioned in this bullet point will not need to be tested. 
+The error returned will be: Error: Operator must be '+' or '-'.
 Each number (operand) should only contain digits. Otherwise, the function will return: Error: Numbers must only contain 
 digits.
 Each operand (aka number on each side of the operator) has a max of four digits in width. Otherwise, the error string 
