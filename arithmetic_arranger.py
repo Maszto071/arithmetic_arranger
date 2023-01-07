@@ -77,13 +77,12 @@ def do_math(element):
 
 [do_math(x) for x in empty_ls]
 
-for i in range(3):
+for i in range(len(empty_l)):
     empty_ls[i].append("    ----")
     empty_ls[i].append(empty_l[i])
 
 TODO: "print in one line"
 for i in range(5):
-  print(i)
   for key, value in enumerate(empty_ls):
       print("{0:{align}8}".format(empty_ls[key][i],align='>'), end= " ")
   print("\n".lstrip())
