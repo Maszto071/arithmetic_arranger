@@ -60,3 +60,4 @@ for i in range(5):
 input = get_input(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"])
 split = split_input(input)
 math = apply_math(split)
+#TODO: join two lists: split, math, into one
